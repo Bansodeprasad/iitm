@@ -1,0 +1,5 @@
+def get_osrm_route(start_coords, end_coords):
+    url = f"http://router.project-osrm.org/route/v1/driving/{start_coords};{end_coords}"
+    params = {"overview": "full"}
+    response = requests.get(url, params=params)
+    return response.json()
