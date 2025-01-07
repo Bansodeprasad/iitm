@@ -1,0 +1,10 @@
+def calculate_emissions(distance, fuel_efficiency, emission_factor):
+    """
+    Calculate CO2 emissions.
+    :param distance: Distance in kilometers.
+    :param fuel_efficiency: Vehicle efficiency in km per liter.
+    :param emission_factor: CO2 emitted per liter of fuel (kg CO2/L).
+    """
+    fuel_used = distance / fuel_efficiency
+    emissions = fuel_used * emission_factor
+    return emissions
